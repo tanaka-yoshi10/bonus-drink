@@ -1,12 +1,9 @@
 class BonusDrink
   def self.total_count_for(amount)
-    nokori = amount
-    sum = 0
-    while nokori >= 3
-      nokori -= 3
-      sum += 3
-      nokori += 1
+    if amount >= 1
+      amount + (amount - 1)/2
+    else
+      0
     end
-    return sum + nokori
   end
 end
